@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "869698268471",
+    "firebase_url": "https://warehousemanagementsyste-674dc-default-rtdb.firebaseio.com",
+    "project_id": "warehousemanagementsyste-674dc",
+    "storage_bucket": "warehousemanagementsyste-674dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869698268471:android:7c18ff0a6772539c2bbeb2",
+        "android_client_info": {
+          "package_name": "com.example.warehouse_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "869698268471-87b279e2agsf233u9nrnmesnfe2toicg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.warehouse_app",
+            "certificate_hash": "7b814e3f141c9e9691a9220c3608cdf881bc202d"
+          }
+        },
+        {
+          "client_id": "869698268471-m3db1t2dcqptrbidr8hd3jkd1hbeeroj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXeus8-4T7jUuYT1cO8QX-w71BqIoL_JA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "869698268471-m3db1t2dcqptrbidr8hd3jkd1hbeeroj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
