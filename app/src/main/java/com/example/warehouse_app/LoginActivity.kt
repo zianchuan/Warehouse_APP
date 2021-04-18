@@ -67,6 +67,7 @@ class LoginActivity : AppCompatActivity() {
         if (i == R.id.btn_forgot_password) {
             startActivity(Intent(applicationContext, ResetPasswordActivity::class.java))
         }
+
     }
 
 
