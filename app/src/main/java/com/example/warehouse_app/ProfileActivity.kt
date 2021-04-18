@@ -3,6 +3,10 @@ package com.example.warehouse_app
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_profile.*
 import com.google.firebase.database.*
@@ -34,6 +38,13 @@ class ProfileActivity : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
 
 
+                val imageUrl = snapshot.child("image").value.toString()
+
+                val profileImage = findViewById<ImageView>(R.id.profileImage)
+
+                if(imageUrl != null){
+                    displayImage(imageUrl, profileImage)
+                }
 
                 firstnameText.text = "Firstname ---> "+snapshot.child("firstname").value.toString()
                 lastnameText.text = "Last name ---> "+snapshot.child("lastname").value.toString()
@@ -55,4 +66,15 @@ class ProfileActivity : AppCompatActivity() {
             finish()
         }
     }
+    private fun displayImage(imageUrl: String, profileImage: ImageView) {
+        try {
+            val options: RequestOptions = RequestOptions()
+                .centerCrop()
+
+            Glide.with(this).load(imageUrl).apply(options).into(profileImage)
+        } catch (e: Exception) {
+            Log.d("error", e.toString())
+        }
+    }
+
 }

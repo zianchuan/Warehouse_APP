@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="profileImage" type="id" />
+    <item name="firstnameText" type="id" />
+    <item name="lastnameText" type="id" />
+    <item name="emailText" type="id" />
+    <item name="birthdayText" type="id" />
+    <item name="positionText" type="id" />
+    <item name="employedDateText" type="id" />
+    <item name="staffIDText" type="id" />
+    <item name="logoutButton" type="id" />
+    <item name="tvDetail" type="id" />
+</resources>
