@@ -12,15 +12,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.1"
-        android:background="#274e54"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background" />
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:alpha="0.1"
+        android:alpha="0.4"
         android:background="#274e54"
         android:scaleType="centerCrop"
         android:src="@drawable/background" />
@@ -148,7 +140,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
