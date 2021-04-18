@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/nav_homepage">
+    <fragment
+        android:id="@+id/nav_homepage"
+        android:name="com.example.warehouse_app.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_nav_homepage_to_nav_myProfile2"
+            app:destination="@id/nav_myProfile" />
+        <action
+            android:id="@+id/action_nav_homepage_to_shipment_Fragment"
+            app:destination="@id/nav_shipment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_myProfile"
+        android:name="com.example.warehouse_app.User_Profile_Fragment"
+        android:label="fragment_user__profile_"
+        tools:layout="@layout/fragment_user__profile_" />
+
+    <fragment
+        android:id="@+id/nav_shipment"
+        android:name="com.example.warehouse_app.Shipment_Fragment"
+        android:label="fragment_shipment"
+        tools:layout="@layout/fragment_shipment" >
+        <action
+            android:id="@+id/action_nav_shipment_to_shipProduct_Fragment"
+            app:destination="@id/nav_shipProduct" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_shipProduct"
+        android:name="com.example.warehouse_app.ShipProduct_Fragment"
+        android:label="fragment_ship_product_"
+        tools:layout="@layout/fragment_ship_product_" >
+        <action
+            android:id="@+id/action_shipProduct_Fragment_to_itemDetailsShipmentFragment"
+            app:destination="@id/nav_itemDetailsShipment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_itemDetailsShipment"
+        android:name="com.example.warehouse_app.ItemDetailsShipmentFragment"
+        android:label="fragment_item_details_shipment"
+        tools:layout="@layout/fragment_item_details_shipment" >
+       <argument
+            android:name="itemIDArgument"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_itemDetailsShipment_to_nav_shipProduct"
+            app:destination="@id/nav_shipProduct" />
+        <action
+            android:id="@+id/action_nav_itemDetailsShipment_to_shippingDetailsFragment"
+            app:destination="@id/shippingDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shippingDetailsFragment"
+        android:name="com.example.warehouse_app.ShippingDetailsFragment"
+        android:label="fragment_shipping_details"
+        tools:layout="@layout/fragment_shipping_details" >
+        <argument
+            android:name="itemIDDetailsArgument"
+            app:argType="string" />
+        <argument
+            android:name="imageUrlArgument"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_shippingDetailsFragment_to_nav_itemDetailsShipment"
+            app:destination="@id/nav_itemDetailsShipment" />
+        <action
+            android:id="@+id/action_shippingDetailsFragment_to_successfullyShipmentFragment"
+            app:destination="@id/successfullyShipmentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfullyShipmentFragment"
+        android:name="com.example.warehouse_app.SuccessfullyShipmentFragment"
+        android:label="fragment_successfully_shipment"
+        tools:layout="@layout/fragment_successfully_shipment" />
+</navigation>

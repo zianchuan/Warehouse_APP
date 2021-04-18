@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group  android:checkableBehavior="single">
+
+        <item android:title="STIRON WAREHOUSE">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_homepage"
+                    android:title="HOMEPAGE"
+                    android:icon="@drawable/homepage_icon"/>
+
+                <item
+                    android:id="@+id/nav_receiveProduct"
+                    android:title="RECEIVE PRODUCT"
+                    android:icon="@drawable/receive"/>
+
+                <item
+                    android:id="@+id/nav_storage"
+                    android:title="STORAGE"
+                    android:icon="@drawable/store"/>
+
+                <item
+                    android:id="@+id/nav_shipment"
+                    android:title="SHIPMENT"
+                    android:icon="@drawable/ship_icon"/>
+
+                <item
+                    android:id="@+id/nav_report"
+                    android:title="REPORT"
+                    android:icon="@drawable/report_icon"/>
+
+                <item
+                    android:id="@+id/nav_map"
+                    android:title="MAPS &amp; LOCATIONS"
+                    android:icon="@drawable/location_icon"/>
+            </menu>
+        </item>
+
+
+    </group>
+
+    <item
+        android:title="Profile">
+
+        <menu>
+            <item
+                android:id="@+id/nav_myProfile"
+                android:title="MY PROFILE"/>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:title="LOGOUT"/>
+        </menu>
+
+    </item>
+
+</menu>

@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="menuBar">#144C57</color>
+    <color name="background">#DEE4E8</color>
+    <color name="whitetransparent">#80FFFFFF</color>
+    <color name="greentransparentbackground">#DB274E54</color>
+    <color name="button_colour">#51C9DB</color>
+    <color name="grey">#BDC1CB</color>
+   <color name="grey_text">#918D8D</color>
+    <color name="bluegreenbg">#CCE1E5</color>
 </resources>

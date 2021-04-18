@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomePageFragment"
+    android:background="@color/background">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/homepagebground"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/homepagebg"
+                android:orientation="vertical"
+                android:padding="0dp"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="55dp"
+
+                app:layout_constraintEnd_toEndOf= "@id/layoutHeader"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="412dp"
+                    android:layout_height="45dp"
+                    android:background="@drawable/labelbackground"
+
+                    tools:ignore="MissingConstraints">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:text="HOME PAGE"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="25dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/profileimagecardview"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        app:cardCornerRadius="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="40dp">
+                        <ImageView
+                            android:id="@+id/img_userprofile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/store">
+                        </ImageView>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txt_staffName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="25dp"
+                            android:gravity="right"
+                            android:text="Staff Name"
+                            android:textColor="@color/white"
+                            android:textSize="25dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_staffPosition"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="right"
+                            android:text="Position"
+                            android:textColor="@color/white"
+                            android:textSize="18dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="190dp">
+
+            <LinearLayout
+                android:id="@+id/menuReceive"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/rectanglebackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="230dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:src="@drawable/receive" >
+                </ImageView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="RECEIVE"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menuStorage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="328dp"
+                android:background="@drawable/rectanglebackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="228dp"
+                android:layout_marginRight="35dp">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="0dp"
+                    android:padding="0dp"
+                    android:src="@drawable/store" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:layout_margin="0dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:paddingBottom="0dp"
+                    android:text="STORAGE"
+                    android:textSize="18dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menuPackShipment"
+            android:layout_width="330dp"
+            android:layout_height="154dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="173dp"
+            android:background="@drawable/rectanglebackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginRight="30dp"
+                    android:padding="0dp"
+                    android:src="@drawable/pick_icon" />
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginLeft="30dp"
+                    android:padding="0dp"
+                    android:src="@drawable/ship_icon" />
+
+            </LinearLayout>>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="0dp"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="PICK &amp; SHIPMENT"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/generateReport"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="100dp"
+            android:background="@drawable/rectanglebackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:id="@+id/report_icon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="0dp"
+                android:src="@drawable/report_icon"
+                app:tint="@color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="0dp"
+                android:gravity="left"
+                android:padding="0dp"
+                android:text="GENERATE REPORT"
+                android:textSize="20dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mapsLocations"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/rectanglebackground"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="0dp"
+                android:src="@drawable/location_icon"
+                app:tint="@color/black" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_margin="0dp"
+                android:gravity="left"
+                android:padding="0dp"
+                android:text="MAPS &amp; LOCATIONS"
+                android:textSize="20dp" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
