@@ -34,6 +34,7 @@ class MapActivity : AppCompatActivity(), View.OnClickListener {
         button10.setOnClickListener(this)
         button11.setOnClickListener(this)
         button12.setOnClickListener(this)
+
     }
 
     override fun onClick(v: View) {
@@ -83,5 +84,6 @@ class MapActivity : AppCompatActivity(), View.OnClickListener {
         val intent = Intent(this, RackActivity::class.java)
         intent.putExtra("RACK_ID", buttonText)
         startActivity(intent)
+
     }
 }

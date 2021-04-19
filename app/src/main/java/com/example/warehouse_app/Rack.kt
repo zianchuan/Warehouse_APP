@@ -24,4 +24,5 @@ class Rack {
         this.imageUrl = imageUrl
     }
 
+
 }

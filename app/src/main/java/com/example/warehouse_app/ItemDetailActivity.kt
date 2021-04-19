@@ -47,7 +47,6 @@ class ItemDetailActivity : AppCompatActivity() {
                         val txtRackId = findViewById<View>(R.id.rackId) as TextView
                         val imgItemPic = findViewById<View>(R.id.itemPic) as ImageView
 
-
                         txtItemId.text = itemId
                         txtItemName.text = model?.itemName
                         txtItemDesc.text = model?.itemDescription

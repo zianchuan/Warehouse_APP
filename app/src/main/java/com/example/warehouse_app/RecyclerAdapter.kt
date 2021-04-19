@@ -25,7 +25,6 @@ class RecyclerAdapter(
             LayoutInflater.from(parent.context).inflate(R.layout.cardview, parent, false)
         return ViewHolder(view)
     }
-
     override fun onBindViewHolder(
         holder: ViewHolder,
         position: Int

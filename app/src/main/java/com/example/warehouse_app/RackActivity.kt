@@ -9,6 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import java.util.*
 
+
+
 class RackActivity : AppCompatActivity() {
     //Widgets
     var recyclerView: RecyclerView? = null
