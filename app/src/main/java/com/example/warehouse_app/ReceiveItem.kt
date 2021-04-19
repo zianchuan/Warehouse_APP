@@ -1,6 +1,7 @@
 package com.example.warehouse_app
 
 import android.content.Intent
+import android.graphics.drawable.Icon
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -45,6 +46,7 @@ class ReceiveItem : AppCompatActivity() {
             startActivity(intent)
 
         }
+
     }
 
     private fun sendData(scanResult: String) {

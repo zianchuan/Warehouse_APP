@@ -42,16 +42,22 @@ class HomePageFragment : Fragment() {
     }
 //navigate to another page
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    //navigation here
         super.onViewCreated(view, savedInstanceState)
         loadProfilePicAndName();
-        report_icon.setOnClickListener{
-            val action = HomePageFragmentDirections.actionNavHomepageToNavMyProfile2()
-           findNavController().navigate(action)
-        }
 
         menuPackShipment.setOnClickListener{
            val action2 = HomePageFragmentDirections.actionNavHomepageToShipmentFragment()
             findNavController().navigate(action2)
+        }
+
+        menuReceive.setOnClickListener{
+            val intent = Intent(activity, ScanItem::class.java)
+            startActivity(intent)
+        }
+        report_icon.setOnClickListener{
+            val intent = Intent(activity, RackIDReportActivity::class.java)
+            startActivity(intent)
         }
     }
 

@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_shipment_history.*
-import kotlinx.android.synthetic.main.fragment_shipment_history.*
+
 
 class ShipmentHistoryActivity : AppCompatActivity() {
 

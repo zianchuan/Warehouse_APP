@@ -15,6 +15,12 @@
         <action
             android:id="@+id/action_nav_homepage_to_shipment_Fragment"
             app:destination="@id/nav_shipment" />
+        <action
+            android:id="@+id/action_nav_homepage_to_rackIDReportActivity"
+            app:destination="@id/nav_report" />
+        <action
+            android:id="@+id/action_nav_homepage_to_scanItem"
+            app:destination="@id/nav_receiveProduct" />
     </fragment>
 
     <fragment
@@ -31,9 +37,7 @@
         <action
             android:id="@+id/action_nav_shipment_to_shipProduct_Fragment"
             app:destination="@id/nav_shipProduct" />
-        <action
-            android:id="@+id/action_nav_shipment_to_shipmentHistoryFragment"
-            app:destination="@id/shipmentHistoryFragment" />
+
     </fragment>
 
     <fragment
@@ -83,9 +87,15 @@
         android:name="com.example.warehouse_app.SuccessfullyShipmentFragment"
         android:label="fragment_successfully_shipment"
         tools:layout="@layout/fragment_successfully_shipment" />
-    <fragment
-        android:id="@+id/shipmentHistoryFragment"
-        android:name="com.example.warehouse_app.ShipmentHistoryFragment"
-        android:label="fragment_shipment_history"
-        tools:layout="@layout/fragment_shipment_history" />
+
+    <activity
+        android:id="@+id/nav_report"
+        android:name="com.example.warehouse_app.RackIDReportActivity"
+        android:label="activity_rack_i_d_report"
+        tools:layout="@layout/activity_rack_i_d_report" />
+    <activity
+        android:id="@+id/nav_receiveProduct"
+        android:name="com.example.warehouse_app.ScanItem"
+        android:label="activity_scan_item"
+        tools:layout="@layout/activity_scan_item" />
 </navigation>
