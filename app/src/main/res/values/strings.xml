@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Warehouse_APP</string>
+    <string name="itemName">Item Name: </string>
+    <string name="itemId">Item ID: </string>
+    <string name="itemDesc">Item Description: </string>
+    <string name="itemQuantity">Quantity: </string>
+    <string name="rackId">Rack ID: </string>
+    <string name="view">View Item</string>
 </resources>
