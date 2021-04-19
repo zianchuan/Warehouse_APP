@@ -29,7 +29,6 @@
         tools:layout_editor_absoluteX="79dp"
         tools:layout_editor_absoluteY="111dp" />
 
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
