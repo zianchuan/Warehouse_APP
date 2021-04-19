@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_nav_shipment_to_shipProduct_Fragment"
             app:destination="@id/nav_shipProduct" />
+        <action
+            android:id="@+id/action_nav_shipment_to_shipmentHistoryFragment"
+            app:destination="@id/shipmentHistoryFragment" />
     </fragment>
 
     <fragment
@@ -80,4 +83,9 @@
         android:name="com.example.warehouse_app.SuccessfullyShipmentFragment"
         android:label="fragment_successfully_shipment"
         tools:layout="@layout/fragment_successfully_shipment" />
+    <fragment
+        android:id="@+id/shipmentHistoryFragment"
+        android:name="com.example.warehouse_app.ShipmentHistoryFragment"
+        android:label="fragment_shipment_history"
+        tools:layout="@layout/fragment_shipment_history" />
 </navigation>

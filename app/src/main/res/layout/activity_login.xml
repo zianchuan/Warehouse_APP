@@ -4,17 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/app_background">
 
 
-    <ImageView
-        android:id="@+id/imageView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:alpha="0.4"
-        android:background="#274e54"
-        android:scaleType="centerCrop"
-        android:src="@drawable/background" />
+        android:background="@drawable/greenbackground">
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/titleTv"
@@ -27,9 +26,8 @@
         android:layout_marginEnd="281dp"
         android:layout_marginRight="281dp"
         android:text="Welcome"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,9 +58,9 @@
         android:layout_marginEnd="176dp"
         android:layout_marginRight="176dp"
         android:layout_marginBottom="18dp"
-        android:text="Login"
-        android:textColor="#000000"
-        android:textSize="24sp"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/usernameInput"
         app:layout_constraintEnd_toEndOf="parent"
@@ -80,7 +78,8 @@
         android:layout_marginEnd="73dp"
         android:layout_marginRight="73dp"
         android:background="#FFFFFF"
-        android:hint="enter email"
+        android:hint="Email"
+        android:paddingLeft="10dp"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +98,8 @@
         android:layout_marginEnd="73dp"
         android:layout_marginRight="73dp"
         android:background="#FFFFFF"
-        android:hint="enter password"
+        android:hint="Password"
+        android:paddingLeft="10dp"
         android:inputType="textPassword"
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,14 +109,14 @@
     <Button
         android:id="@+id/loginButton"
         android:layout_width="266dp"
-        android:layout_height="wrap_content"
+        android:layout_height="?actionBarSize"
         android:layout_margin="90dp"
         android:layout_marginStart="73dp"
         android:layout_marginLeft="73dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="73dp"
         android:layout_marginRight="73dp"
-        android:text="Login"
+        android:text="LOGIN"
         android:textAllCaps="false"
         android:textStyle="bold"
         app:backgroundTint="#51C9DB"
@@ -135,7 +135,7 @@
         android:onClick="onClick"
         android:text="Forgot your password?"
         android:textAllCaps="false"
-        android:textColor="@android:color/holo_blue_dark"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginButton" />

@@ -14,7 +14,7 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_main.*
+
 import kotlinx.android.synthetic.main.fragment_item_details_shipment.*
 import kotlinx.android.synthetic.main.fragment_shipment.*
 import com.bumptech.glide.Glide

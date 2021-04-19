@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
 
         val currentuser = auth.currentUser
         if (currentuser != null) {
-            startActivity(Intent(this@LoginActivity, ProfileActivity::class.java))
+            startActivity(Intent(this@LoginActivity, HomePage::class.java))
             finish()
         }
         login()
@@ -46,7 +46,7 @@ class LoginActivity : AppCompatActivity() {
             )
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        startActivity(Intent(this@LoginActivity, ProfileActivity::class.java))
+                        startActivity(Intent(this@LoginActivity, HomePage::class.java))
                         finish()
                     } else {
                         Toast.makeText(
@@ -56,9 +56,7 @@ class LoginActivity : AppCompatActivity() {
                         ).show()
                     }
                 }
-
         }
-
     }
 
     fun onClick(view: View?) {
@@ -69,7 +67,4 @@ class LoginActivity : AppCompatActivity() {
         }
 
     }
-
-
-
 }

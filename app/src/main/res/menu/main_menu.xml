@@ -49,9 +49,7 @@
                 android:id="@+id/nav_myProfile"
                 android:title="MY PROFILE"/>
 
-            <item
-                android:id="@+id/nav_logout"
-                android:title="LOGOUT"/>
+
         </menu>
 
     </item>

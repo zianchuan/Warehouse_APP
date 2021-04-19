@@ -18,6 +18,8 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.fragment_ship_product_.*
 import kotlinx.android.synthetic.main.fragment_shipping_details.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,13 +51,16 @@ class ShippingDetailsFragment : Fragment() {
     //send data to shipment database
     private fun sendData(){
 
+        val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
+        val currentDate = sdf.format(Date())
+
         var receiverName = editTextReceiverName.text.toString().trim()
         var contactNumber = editTextContactNumber.text.toString().trim()
         var address = editTextAddressr.text.toString().trim()
         var itemID = args.itemIDDetailsArgument.trim()
 
         if(receiverName.isNotEmpty() && contactNumber.isNotEmpty() && address.isNotEmpty()){
-            var model = ShipmentDatabaseModel(receiverName, contactNumber, address, itemID)
+            var model = ShipmentDatabaseModel(receiverName, contactNumber, address, itemID, currentDate)
             var id = reference.push().key
 
             //send data to firebase

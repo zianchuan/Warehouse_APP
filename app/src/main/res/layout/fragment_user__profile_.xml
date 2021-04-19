@@ -48,13 +48,13 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:layout_marginTop="60dp"
-            android:layout_marginLeft="30dp"
             android:gravity="center_horizontal"
             >
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginRight="30dp"
                 app:layout_constraintTop_toBottomOf="@id/homepagebground"
                 app:layout_constraintStart_toStartOf="parent">
 
@@ -62,6 +62,7 @@
                     android:id="@+id/profileimagecardview"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
+                    android:layout_gravity="center"
                     app:cardCornerRadius="100dp">
                     <ImageView
                         android:id="@+id/img_userprofile"
@@ -71,18 +72,52 @@
                     </ImageView>
 
                 </androidx.cardview.widget.CardView>
-                <Button
-                    android:id="@+id/btn_changePic"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:text="Change"
-                    app:backgroundTint="@color/button_colour" />
+>
+                    <Button
+                        android:id="@+id/btn_changePic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="5dp"
+                        android:text="CHANGE"
+                        app:backgroundTint="@color/grey_text" />
+
+                    <Button
+                        android:id="@+id/btn_uploadPic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:text="Confirm"
+                        app:backgroundTint="@color/grey_text" />
+                </LinearLayout>
+
             </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="30dp"
+            app:layout_constraintTop_toBottomOf="@id/homepagebground"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
-                android:id="@+id/txt_staffName"
+                android:id="@+id/txt_staffFirstName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center"
+                android:text="Staff Name"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txt_staffLastName"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
@@ -95,13 +130,15 @@
 
         </LinearLayout>
 
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/staffdetails"
             android:layout_width="352dp"
-            android:layout_height="330dp"
+            android:layout_height="280dp"
             android:background="@drawable/labelbackground"
             android:layout_marginLeft="20dp"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="80dp"
             android:orientation="horizontal"
             android:padding="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -166,6 +203,34 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="left"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="D.O.B:"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/staffID"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="Employed \nDate:"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintTop_toBottomOf="@id/staffID"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -181,10 +246,10 @@
                         android:layout_height="30dp"
                         android:gravity="left"
                         android:layout_marginTop="10dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
                         android:text="Position"
                         android:textColor="@color/white"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         />
@@ -195,23 +260,52 @@
                         android:layout_height="30dp"
                         android:gravity="left"
                         android:layout_marginTop="20dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
                         android:text="Staff ID"
                         android:textColor="@color/white"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
                         app:layout_constraintTop_toBottomOf="@id/txt_staffPosition"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
+                        android:id="@+id/txt_staffEmail"
                         android:layout_width="fill_parent"
                         android:layout_height="30dp"
                         android:gravity="left"
                         android:layout_marginTop="20dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_marginLeft="10dp"
                         android:text="Email"
                         android:textColor="@color/white"
-                        android:textSize="20dp"
+                        android:textSize="18dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_staffID"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_staffDOB"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="left"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Email"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:layout_constraintTop_toBottomOf="@id/txt_staffID"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txt_staffEmployedDate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:gravity="left"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Email"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
                         app:layout_constraintTop_toBottomOf="@id/txt_staffID"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -220,6 +314,21 @@
 
             </LinearLayout>
 
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/staffdetails"
+            app:layout_constraintStart_toStartOf="@id/staffdetails">
+
+            <Button
+                android:id="@+id/btn_StaffLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Logout"
+                app:backgroundTint="@color/button_colour" />
         </LinearLayout>
 
 

@@ -34,7 +34,7 @@ class ResetPasswordActivity : AppCompatActivity() {
             }
         }
 
-        btnBack.setOnClickListener {
+        btn_Back.setOnClickListener {
             finish()
         }
     }
