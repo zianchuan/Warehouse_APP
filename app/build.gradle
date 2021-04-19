@@ -13,7 +13,8 @@ android {
 
     defaultConfig {
         applicationId "com.example.warehouse_app"
-        minSdkVersion 16
+        //minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -51,6 +52,7 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.google.firebase:firebase-database:19.7.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.firebase:firebase-database:19.7.0'
     testImplementation 'junit:junit:4.+'
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:27.0.0')
@@ -76,4 +78,12 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation "androidx.recyclerview:recyclerview:1.1.0"
 
+    implementation 'com.budiyev.android:code-scanner:2.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+
+    implementation 'com.google.firebase:firebase-messaging:21.1.0'
 }
+
+apply plugin: 'com.google.gms.google-services'

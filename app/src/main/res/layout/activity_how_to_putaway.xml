@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp"
+        android:text="HOW TO PUTAWAY?" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="If you have not given camera access to your phone to scan a QR code, give access first." />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="Hold your device over a QR Code so that it's clearly visible within your smartphone's screen. It will automatically scan the code and proceed to the next screen." />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="Every rack and shelve has attached a QR code to scan." />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:text="Look carefully and precisely of the relative code to scan to prevent errors and mistakes!" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="236dp"
+        android:layout_height="285dp"
+        android:layout_marginLeft="150dp"
+        app:srcCompat="@drawable/putaway_guide" />
+</LinearLayout>
