@@ -22,18 +22,15 @@ class RackActivity : AppCompatActivity() {
     private val mContext: Context? = null
     private lateinit var linearLayoutManager: LinearLayoutManager
 
-    //String buttonRackID = getIntent().getStringExtra("RACK_ID");
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rack)
 
         val btnText = intent.getStringExtra("RACK_ID")
         val recyclerView : RecyclerView = findViewById(R.id.recyclerView)
-        //val layoutManager = LinearLayoutManager(this)
         linearLayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = linearLayoutManager
-        //recyclerView.setLayoutManager(layoutManager)
-        //recyclerView.setHasFixedSize(true)
 
         //Firebase
         myRef = FirebaseDatabase.getInstance().reference
