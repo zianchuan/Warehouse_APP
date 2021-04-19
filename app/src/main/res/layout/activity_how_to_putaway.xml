@@ -22,6 +22,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:textAlignment="center"
         android:textSize="16sp"
         android:text="If you have not given camera access to your phone to scan a QR code, give access first." />
@@ -31,6 +33,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:textAlignment="center"
         android:textSize="16sp"
         android:text="Hold your device over a QR Code so that it's clearly visible within your smartphone's screen. It will automatically scan the code and proceed to the next screen." />
@@ -40,6 +44,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:textAlignment="center"
         android:textSize="16sp"
         android:text="Every rack and shelve has attached a QR code to scan." />
@@ -49,6 +55,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
         android:textAlignment="center"
         android:textSize="16sp"
         android:text="Look carefully and precisely of the relative code to scan to prevent errors and mistakes!" />

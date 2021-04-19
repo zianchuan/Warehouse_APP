@@ -21,20 +21,26 @@ class PutawayItemDetails : AppCompatActivity() {
     }
 
     private lateinit var database: FirebaseDatabase
-    private lateinit var reference: DatabaseReference
+    private lateinit var referenceItems: DatabaseReference
+    private lateinit var referenceRack: DatabaseReference
+
+    private lateinit var rackID: String
+    private lateinit var rackID2: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_putaway_item_details)
 
         database = FirebaseDatabase.getInstance();
-        reference = database.getReference("Items")
+        referenceItems = database.getReference("Items")
+        referenceRack = database.getReference("Rack")
+
         var bundle = intent.extras
         if (bundle != null) {
             val scanResultRack: String = bundle.get(SCAN_RESULT_RACK).toString()
             val referenceId: String = bundle.get(REFERENCE_ID).toString()
             sendData(scanResultRack, referenceId)
-            getData(referenceId)
+            getDataDisplay(referenceId)
         }
 
         val btnReviewAnotherProduct = findViewById<Button>(R.id.btnReviewAnotherProduct)
@@ -46,18 +52,26 @@ class PutawayItemDetails : AppCompatActivity() {
 
     private fun sendData(scanResultRack: String, referenceId: String) {
         if (scanResultRack.isNotEmpty() && referenceId.isNotEmpty()) {
+            val scanResultArray = scanResultRack.split("|")
+
+            rackID = scanResultArray[0]
+            rackID2 = scanResultArray[1]
+
             val txtRackID = findViewById<TextView>(R.id.txtRackID)
-            txtRackID.text = scanResultRack
-            //send data to database
-            reference.child(referenceId!!).child("rackId").setValue(scanResultRack)
-            reference.child(referenceId!!).child("putAwayDateTime").setValue(Date().time)
+            txtRackID.text = rackID2
+
+            referenceItems.child(referenceId!!).child("rackId").setValue(rackID2)
+            referenceItems.child(referenceId!!).child("putAwayDateTime").setValue(Date().time)
+
+            getData(referenceId)
+
         } else {
             Toast.makeText(applicationContext, "All fields required", Toast.LENGTH_LONG).show()
         }
     }
 
-    private fun getData(referenceId: String) {
-        reference.child(referenceId).addValueEventListener(object : ValueEventListener {
+    private fun getDataDisplay(referenceId: String) {
+        referenceItems.child(referenceId).addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
                 TODO("Not yet implemented")
             }
@@ -97,6 +111,31 @@ class PutawayItemDetails : AppCompatActivity() {
 
             }
         })
+    }
+
+    private fun getData(referenceId: String) {
+        referenceItems.child(referenceId).addValueEventListener(object : ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onDataChange(snapshot: DataSnapshot) {
+                var databaseModel : DatabaseModel? = snapshot.getValue(DatabaseModel::class.java)
+                print(databaseModel)
+
+                val itemName = databaseModel?.itemName
+                val imageUrl = databaseModel?.image
+                val itemId = databaseModel?.itemId
+                val itemQuantity = databaseModel?.itemQuantity
+                val rackIDDisplay = databaseModel?.rackId
+
+                referenceRack.child(rackID!!).child(rackID2).setValue(databaseModel)
+                /*referenceRack.child("C-1").child(rackID2).setValue(databaseModel)*/
+                referenceRack.child(rackID!!).child(rackID2).child("putAwayDateTime").setValue(Date().time)
+            }
+        })
+
+
     }
 
     private fun displayImage(imageUrl: String, imageView: ImageView) {
