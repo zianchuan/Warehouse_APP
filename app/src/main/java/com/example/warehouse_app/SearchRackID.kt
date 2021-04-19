@@ -54,12 +54,18 @@ class SearchRackID : AppCompatActivity() {
                         val itemId = databaseModel?.itemId
                         val itemDescription = databaseModel?.itemDescription
                         val itemQuantity = databaseModel?.itemQuantity
+                        val rackId = rackID
+                        val dateFormat = SimpleDateFormat("dd-MMM-yyyy hh:mm:ss", Locale.ENGLISH)
+                        val putAwayDateTime = dateFormat.format(Date(databaseModel?.putAwayDateTime as Long))
+                        // SimpleDateFormat
 
                         val txtItemName = findViewById<TextView>(R.id.txtItemName)
                         val imageView = findViewById<ImageView>(R.id.imageView)
                         val txtItemID = findViewById<TextView>(R.id.txtItemId)
                         val txtItemDesc = findViewById<TextView>(R.id.txtItemDesc)
                         val txtItemQty = findViewById<TextView>(R.id.txtItemQty)
+                        val txtRackID = findViewById<TextView>(R.id.txtRackID)
+                        val txtPutAwayDateTime = findViewById<TextView>(R.id.txtPutAwayDateTime)
 
                         if (imageUrl != null) {
                             displayImage(imageUrl, imageView)
@@ -69,6 +75,8 @@ class SearchRackID : AppCompatActivity() {
                         txtItemID.text = itemId
                         txtItemDesc.text = itemDescription
                         txtItemQty.text = itemQuantity
+                        txtRackID.text = rackId
+                        txtPutAwayDateTime.text = putAwayDateTime
                     }
                 }
             }
